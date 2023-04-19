@@ -1,18 +1,18 @@
 package web.dao;
 
-
-import web.model.User;
+import web.models.User;
 
 import java.util.List;
 
 public interface UserDao {
-    void addUser(User user);
 
-    void deleteUser(Long id);
+    public List<User> findAll();
 
-    void updateUser(User user);
+    public User fineOne(int id);
 
-    List<User> getAllUser();
+    public void save(User user);
 
-    User getById(Long id);
+    public void update(int id, User updatedUser);
+
+    public void delete(int id);
 }
